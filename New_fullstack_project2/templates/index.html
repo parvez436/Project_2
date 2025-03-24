@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Processing System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center text-primary">Place an Order</h1>
+        
+        <form id="orderForm" class="mt-4 p-4 bg-white rounded shadow-sm">
+            <div class="mb-3">
+                <label for="customerName" class="form-label">Customer Name:</label>
+                <input type="text" id="customerName" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="productList" class="form-label">Products (comma-separated):</label>
+                <input type="text" id="productList" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="totalPrice" class="form-label">Total Price:</label>
+                <input type="number" id="totalPrice" class="form-control" required>
+            </div>
+
+            <button type="button" class="btn btn-success" onclick="placeOrder()">Place Order</button>
+            <a href="/orders" class="btn btn-info">View Orders</a>
+        </form>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
